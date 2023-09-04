@@ -22,7 +22,7 @@ const ColleageForm = () => {
       if (!token) {
         navigate('/login'); // Redirect to login route if token is not present
       } else {
-        const response = await axios.post(`http://172.20.10.11:5000/api/colleage/addnewcolleage`, {
+        const response = await axios.post(`https://slogic.dorto-dev.com/api/colleage/addnewcolleage`, {
           colleageName,
           colleageImgUrl,
           universityId

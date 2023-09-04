@@ -16,7 +16,7 @@ const SignUp = () => {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        Axios.post(`http://172.20.10.11:5000/api/signup`, {
+        Axios.post(`https://slogic.dorto-dev.com/api/signup`, {
             username,
             email,
             password

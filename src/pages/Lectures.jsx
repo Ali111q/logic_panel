@@ -24,7 +24,7 @@ const Lectures = () => {
           return;
         }
         
-        const response = await axios.get(`http://172.20.10.11:5000/api/course/${courseId}`, { headers });
+        const response = await axios.get(`https://slogic.dorto-dev.com/api/course/${courseId}`, { headers });
         setVideos(response.data.courseVideos);
       } catch (error) {
         if (error.response && error.response.status === 401) {

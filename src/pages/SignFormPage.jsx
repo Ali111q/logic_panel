@@ -11,7 +11,7 @@ const SignForm = () => {
     const navigate = useNavigate()
     const submitHandler = (e) => {
         e.preventDefault();
-        Axios.post(`http://172.20.10.11:5000/api/login`, {
+        Axios.post(`https://slogic.dorto-dev.com/api/login`, {
             email,
             password,
         })

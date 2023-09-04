@@ -28,7 +28,7 @@ const OneColleage = ({ collegeId,currentUniversityId }) => {
                 if (!token) {
                     navigate('/login')
                 } else {
-                    const response = await axios.get(`http://172.20.10.11:5000/api/colleage/${collegeId}`, { headers });
+                    const response = await axios.get(`https://slogic.dorto-dev.com/api/colleage/${collegeId}`, { headers });
                     console.log(response)
                     setOneCollege(response.data);
                     setCollegeDeletedId(response.data._id)
@@ -46,7 +46,7 @@ const OneColleage = ({ collegeId,currentUniversityId }) => {
     
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://172.20.10.11:5000/api/colleage/${collegeDeletedId}`, { headers });
+            await axios.delete(`https://slogic.dorto-dev.com/api/colleage/${collegeDeletedId}`, { headers });
             setIsDeleteClicked(true); // Update the state to indicate deletion
         } catch (err) {
             console.log(err);

@@ -14,14 +14,14 @@ const UserCard = ({ id, currentCourseId,userInfo }) => {
     //active course function
     const activeClickHandler = (e) => {
         e.preventDefault()
-        axios.patch(`http://172.20.10.11:5000/api/activeusercourse/${id}/${currentCourseId}`,{currentCourseId},{headers})
+        axios.patch(`https://slogic.dorto-dev.com/api/activeusercourse/${id}/${currentCourseId}`,{currentCourseId},{headers})
         setIsCourseActive(true)
     }
 
     //non active function 
     const nonActiveHandler = (e) =>{
         e.preventDefault()
-        axios.patch(`http://172.20.10.11:5000/api/nonactiveusercourse/${id}/${currentCourseId}`,{currentCourseId},{headers})
+        axios.patch(`https://slogic.dorto-dev.com/api/nonactiveusercourse/${id}/${currentCourseId}`,{currentCourseId},{headers})
         setIsCourseActive(false)
     }
 

@@ -42,7 +42,7 @@ const LectureForm = () => {
         navigate('/login');
       } else {
         const response = await axios.post(
-          `http://172.20.10.11:5000/api/video/addnewvideo`,
+          `https://slogic.dorto-dev.com/api/video/addnewvideo`,
           {
             videoTitle,
             videoDescription, // Fix the key name here

@@ -33,7 +33,7 @@ const University = ({ title, img, id }) => {
     };
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://172.20.10.11:5000/api/university/${id}`, { headers });
+            await axios.delete(`https://slogic.dorto-dev.com/api/university/${id}`, { headers });
             setIsDeleteClicked(true); // Update the state to indicate deletion
         } catch (err) {
             console.log(err);

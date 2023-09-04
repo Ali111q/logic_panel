@@ -21,7 +21,7 @@ const Universities = () => {
         if (!token) {
           navigate('/login'); // Redirect to login route if token is not present
         } else {
-          const response = await axios.get(`http://172.20.10.11:5000/api/university`, { headers });
+          const response = await axios.get(`https://slogic.dorto-dev.com/api/university`, { headers });
           setUniversities(response.data);
         }
       } catch (error) {

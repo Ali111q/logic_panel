@@ -52,8 +52,8 @@ const LectureRow = ({ videoId }) => {
                 if (!token) {
                     navigate('/login'); // Redirect to login route if token is not present
                 } else {
-                    const courseInformation = await axios.get(`http://172.20.10.11:5000/api/course/${courseId}`, { headers })
-                    const response = await axios.get(`http://172.20.10.11:5000/api/video/${videoId}`, { headers })
+                    const courseInformation = await axios.get(`https://slogic.dorto-dev.com/api/course/${courseId}`, { headers })
+                    const response = await axios.get(`https://slogic.dorto-dev.com/api/video/${videoId}`, { headers })
                     console.log(response)
                     setCourseTitle(courseInformation.data.courseTitle)
                     setCourseStage(courseInformation.data.courseStage)
@@ -80,7 +80,7 @@ const LectureRow = ({ videoId }) => {
        //delete handler
        const handleDelete = async () => {
            try {
-               await axios.delete(`http://172.20.10.11:5000/api/video/${videoDeletedId}`, { headers });
+               await axios.delete(`https://slogic.dorto-dev.com/api/video/${videoDeletedId}`, { headers });
                setIsDeleteClicked(true); // Update the state to indicate deletion
         } catch (err) {
             console.log(err);

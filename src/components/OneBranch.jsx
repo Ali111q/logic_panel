@@ -33,7 +33,7 @@ const OneBranch = ({ oneBranchId, img }) => {
                     if (!token) {
                         navigate('/login')
                     } else {
-                        const response = await axios.get(`http://172.20.10.11:5000/api/branch/${oneBranchId}`, { headers });
+                        const response = await axios.get(`https://slogic.dorto-dev.com/api/branch/${oneBranchId}`, { headers });
                         setOneBranch(response.data)
                         setBranchIdDeleted(response.data._id)
                     }
@@ -51,7 +51,7 @@ const OneBranch = ({ oneBranchId, img }) => {
 
         const handleDelete = async () => {
             try {
-                await axios.delete(`http://172.20.10.11:5000/api/branch/${branchIdDeleted}`, { headers });
+                await axios.delete(`https://slogic.dorto-dev.com/api/branch/${branchIdDeleted}`, { headers });
                 setIsDeleteClicked(true); // Update the state to indicate deletion
             } catch (err) {
                 console.log(err);

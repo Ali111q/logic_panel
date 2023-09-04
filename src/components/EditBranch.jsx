@@ -27,7 +27,7 @@ const EditBranch = () => {
         if (!token) {
           navigate('/login'); // Redirect to login route if token is not present
         } else {
-          const response = await axios.get(`http://172.20.10.11:5000/api/branch/${branchId}`, { headers });
+          const response = await axios.get(`https://slogic.dorto-dev.com/api/branch/${branchId}`, { headers });
           console.log(response)
           setBranchName(response.data.data.branchName)
           setBranchStageNumbers(response.data.data.branchStageNumbers)
@@ -53,7 +53,7 @@ const EditBranch = () => {
       if (!token) {
         navigate('/login'); // Redirect to login route if token is not present
       } else {
-        const response = await axios.patch(`http://172.20.10.11:5000/api/branch/${branchId}`, {
+        const response = await axios.patch(`https://slogic.dorto-dev.com/api/branch/${branchId}`, {
           branchName,
           branchStageNumbers,
         }, { headers });

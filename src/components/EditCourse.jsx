@@ -50,8 +50,8 @@ const EditCourse = () => {
                 if (!token) {
                     navigate('/login'); // Redirect to login route if token is not present
                 } else {
-                    const courseResponse = await axios.get(`http://172.20.10.11:5000/api/course/${courseId}`, { headers })
-                    const branchNameResponse = await axios.get(`http://172.20.10.11:5000/api/branch/${branchId}`, { headers })
+                    const courseResponse = await axios.get(`https://slogic.dorto-dev.com/api/course/${courseId}`, { headers })
+                    const branchNameResponse = await axios.get(`https://slogic.dorto-dev.com/api/branch/${branchId}`, { headers })
                     console.log(courseResponse)
                     console.log(branchNameResponse)
                     setBranchName(branchNameResponse.data.branchName)
@@ -87,7 +87,7 @@ const EditCourse = () => {
             if (!token) {
                 navigate('/login'); // Redirect to login route if token is not present
             } else {
-                const response = await axios.patch(`http://172.20.10.11:5000/api/course/${courseId}`, {
+                const response = await axios.patch(`https://slogic.dorto-dev.com/api/course/${courseId}`, {
                     courseUniversityName: universityName,
                     courseColleageName: collegeName,
                     courseBranchName: branchName,
