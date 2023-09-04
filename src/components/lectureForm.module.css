@@ -1,0 +1,11 @@
+
+input::placeholder{
+    color: black;
+    opacity: 1;
+    text-align: right;
+    padding-right: .8rem;
+}
+.address-class::placeholder{
+    padding-left: .3rem;
+    text-align: left;
+}
